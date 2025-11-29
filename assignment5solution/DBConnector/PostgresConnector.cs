@@ -1,37 +1,35 @@
 using Npgsql;
 
-namespace DBConnector;
-
-public class PostgresConnector : IDBConnector
+namespace DBConnector
 {
-    private NpgsqlConnection connection;
-
-    public PostgresConnector(string connectionString)
+    public class PostgresConnector : IDBConnector
     {
-        connection = new NpgsqlConnection(connectionString);
-    }
+        private readonly NpgsqlConnection _connection;
 
-    public async Task<bool> ping()
-    {
-        try
+        public PostgresConnector(string connectionString)
         {
-            await connection.OpenAsync();
+            _connection = new NpgsqlConnection(connectionString);
+        }
 
-            await using (var cmd = new NpgsqlCommand("SELECT 1", connection))
+        public async Task<bool> PingAsync()
+        {
+            try
             {
+                await _connection.OpenAsync();
+
+                await using var cmd = new NpgsqlCommand("SELECT 1", _connection);
                 var result = await cmd.ExecuteScalarAsync();
 
-                if (result == null)
-                    return false;
-
-                return (int)result == 1;
+                return result != null && (int)result == 1;
             }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Ping failed: " + ex.Message);
-            return false;
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                await _connection.CloseAsync();
+            }
         }
     }
 }
-

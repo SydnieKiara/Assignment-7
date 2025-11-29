@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O81LqnlX7wc=",
+  "dgSpecHash": "czDKFuAhDio=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sidkj\\Source\\Repos\\assignment5solution\\DBConnector.Tests\\DBConnector.Tests.csproj",
+  "projectFilePath": "C:\\Users\\sidkj\\Source\\Repos\\Assignment-7\\assignment5solution\\DBConnector.Tests\\DBConnector.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sidkj\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
     "C:\\Users\\sidkj\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
@@ -47,7 +47,10 @@
     "C:\\Users\\sidkj\\.nuget\\packages\\xunit.extensibility.core\\2.9.2\\xunit.extensibility.core.2.9.2.nupkg.sha512",
     "C:\\Users\\sidkj\\.nuget\\packages\\xunit.extensibility.execution\\2.9.2\\xunit.extensibility.execution.2.9.2.nupkg.sha512",
     "C:\\Users\\sidkj\\.nuget\\packages\\xunit.runner.visualstudio\\2.8.2\\xunit.runner.visualstudio.2.8.2.nupkg.sha512",
-    "C:\\Users\\sidkj\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
+    "C:\\Users\\sidkj\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512",
+    "C:\\Users\\sidkj\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.9\\microsoft.netcore.app.ref.9.0.9.nupkg.sha512",
+    "C:\\Users\\sidkj\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.9\\microsoft.windowsdesktop.app.ref.9.0.9.nupkg.sha512",
+    "C:\\Users\\sidkj\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.9\\microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512"
   ],
   "logs": []
 }

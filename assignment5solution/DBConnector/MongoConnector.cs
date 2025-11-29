@@ -1,34 +1,32 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
 
-namespace DBConnector;
-
-public class MongoConnector : IDBConnector
+namespace DBConnector
 {
-    private string m_connectionString;
-
-    public MongoConnector(string connectionString)
+    public class MongoConnector : IDBConnector
     {
-        m_connectionString = connectionString;
-    }
+        private readonly string _connectionString;
 
-    public async Task<bool> ping()
-    {
-        try
+        public MongoConnector(string connectionString)
         {
-            var client = new MongoClient(m_connectionString);
-            // Ping the database
-            var database = client.GetDatabase("admin"); // "admin" is safe to use for ping
-            var command = new BsonDocument("ping", 1);
-            var result = await database.RunCommandAsync<BsonDocument>(command);
-
-            Console.WriteLine("Ping successful: " + result.ToJson());
-            return true;
+            _connectionString = connectionString;
         }
-        catch (Exception ex)
+
+        public async Task<bool> PingAsync()
         {
-            Console.WriteLine("Ping failed: " + ex.Message);
-            return false;
+            try
+            {
+                var client = new MongoClient(_connectionString);
+                var database = client.GetDatabase("admin");
+                var command = new BsonDocument("ping", 1);
+                await database.RunCommandAsync<BsonDocument>(command);
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
