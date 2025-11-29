@@ -1,0 +1,29 @@
+# ===== BUILD STAGE =====
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+# Copy solution and project files first (for layer caching)
+COPY reference.sln ./
+COPY DBConnector/DBConnector.csproj DBConnector/
+COPY DbReplConsole/DbReplConsole.csproj DbReplConsole/
+
+
+# Restore dependencies
+RUN dotnet restore
+
+# Copy all source code
+COPY . .
+
+# Publish the console app
+RUN dotnet publish DbReplConsole/DbReplConsole.csproj -c Release -o /app/publish
+
+
+# ===== RUNTIME STAGE =====
+FROM mcr.microsoft.com/dotnet/runtime:8.0 AS runtime
+WORKDIR /app
+
+# Copy published output into runtime container
+COPY --from=build /app/publish ./
+
+# Set entrypoint to console app
+ENTRYPOINT ["dotnet", "DbReplConsole.dll"]

@@ -7,6 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBConnector", "DBConnector\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBConnector.Tests", "DBConnector.Tests\DBConnector.Tests.csproj", "{3A39DB22-D091-46E9-9FBE-EA99082F4DF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbReplConsole", "DbReplConsole\DbReplConsole.csproj", "{2FF27E7D-E57A-4C3C-8335-2D8DDE24ECB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile.txt = Dockerfile.txt
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,8 +49,23 @@ Global
 		{3A39DB22-D091-46E9-9FBE-EA99082F4DF9}.Release|x64.Build.0 = Release|Any CPU
 		{3A39DB22-D091-46E9-9FBE-EA99082F4DF9}.Release|x86.ActiveCfg = Release|Any CPU
 		{3A39DB22-D091-46E9-9FBE-EA99082F4DF9}.Release|x86.Build.0 = Release|Any CPU
+		{2FF27E7D-E57A-4C3C-8335-2D8DDE24ECB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FF27E7D-E57A-4C3C-8335-2D8DDE24ECB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FF27E7D-E57A-4C3C-8335-2D8DDE24ECB8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2FF27E7D-E57A-4C3C-8335-2D8DDE24ECB8}.Debug|x64.Build.0 = Debug|Any CPU
+		{2FF27E7D-E57A-4C3C-8335-2D8DDE24ECB8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2FF27E7D-E57A-4C3C-8335-2D8DDE24ECB8}.Debug|x86.Build.0 = Debug|Any CPU
+		{2FF27E7D-E57A-4C3C-8335-2D8DDE24ECB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FF27E7D-E57A-4C3C-8335-2D8DDE24ECB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FF27E7D-E57A-4C3C-8335-2D8DDE24ECB8}.Release|x64.ActiveCfg = Release|Any CPU
+		{2FF27E7D-E57A-4C3C-8335-2D8DDE24ECB8}.Release|x64.Build.0 = Release|Any CPU
+		{2FF27E7D-E57A-4C3C-8335-2D8DDE24ECB8}.Release|x86.ActiveCfg = Release|Any CPU
+		{2FF27E7D-E57A-4C3C-8335-2D8DDE24ECB8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5480E5DC-C5E2-486E-AFBD-3DE807E9F6A8}
 	EndGlobalSection
 EndGlobal

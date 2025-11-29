@@ -1,0 +1,24 @@
+# Ignore Visual Studio temporary files, build results, and settings
+.vs/
+bin/
+obj/
+Debug/
+Release/
+*.user
+*.rsuser
+*.suo
+*.cache
+*.sqlite
+*.db
+
+# Ignore logs
+*.log
+
+# Ignore Docker artifacts
+*.dockerignore
+docker-compose.override.yml
+
+# Ignore system files
+Thumbs.db
+*.DS_Store
+
